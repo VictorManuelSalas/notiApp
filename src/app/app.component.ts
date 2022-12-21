@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+import OneSignal from 'onesignal-cordova-plugin';
+import { PushService } from './services/push.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(plataform: Platform, private pushService: PushService) {
+    plataform.ready().then(() => {
+      this.pushService.OneSignalInit();
+    })
+  }
+
 }
+ 
