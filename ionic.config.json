@@ -1,0 +1,7 @@
+{
+  "name": "notiApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
