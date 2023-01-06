@@ -11,18 +11,18 @@
   <ion-list>
     <ion-list-header>
       <ion-label>
-        Bandeja de entrada
+        Bandeja de {{pushService.infoLocal}} entrada 
       </ion-label>
     </ion-list-header>
     <ion-item *ngFor="let push of pushService.mensajes">
       <ion-label>
-        <h2>{{push.title}}</h2>
-        <p>{{push.body}}</p>
-        <p>
-          {{push.date}}
-          {{push.additionalData | json}}
+        <h2>{{push}}</h2>
+        <p>{{push}}</p>
+        <p>hola
         </p>
       </ion-label>
+
+      <button (click)="pushService.mensajes">Refresh</button>
     </ion-item>
   </ion-list>
 </ion-content>
