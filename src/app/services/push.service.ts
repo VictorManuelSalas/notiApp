@@ -39,7 +39,7 @@ export class PushService {
 
       const notification = notificationReceivedEvent.getNotification()
       notificationReceivedEvent.complete(notification);
-      this.notificacionRecibida(notification);
+      this.informacion(notification);
     });
 
     // Prompts the user for notification permissions.
@@ -50,13 +50,12 @@ export class PushService {
   }
 
   infoLocal: any;
-  informacion(data: any) {
-    alert('Datos de la funcion creada: ' + data);
+  async informacion(data: any) {
+    await alert('Datos de la funcion creada: ' + data);
 
 
-    this.mensajes.unshift(data)
-    localStorage.setItem('noti', 'info');
-    this.infoLocal = localStorage.getItem('noti');
+    await this.mensajes.unshift(data)
+    await alert("Este es el arreglo" + this.mensajes)
   }
 
   async notificacionRecibida(data: any) {
