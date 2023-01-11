@@ -8,10 +8,9 @@ import { PushService } from '../services/push.service';
 })
 export class HomePage {
 
-
   constructor(public pushService: PushService) {
-    localStorage.setItem('noti', 'info');
-    pushService.infoLocal = localStorage.getItem('noti');
+   // localStorage.setItem('noti', 'info');
+   // pushService.infoLocal = localStorage.getItem('noti');
   }
 
   
